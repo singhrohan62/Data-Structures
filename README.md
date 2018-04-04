@@ -1,3 +1,2 @@
 # Data-Structures
-simple programs on different types of data structures
-This is just a practice for making a commit initially.
+The repository contains some of the Data Structures and various Graph and Sorting algorithms.
