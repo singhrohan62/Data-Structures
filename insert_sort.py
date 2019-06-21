@@ -1,6 +1,6 @@
 import numpy as np
 
-__author__ = 'Rohan Singh'
+#__author__ = "Rohan Singh"
 
 def insertion_sort(list):
 	for x in range(1,len(list)):
