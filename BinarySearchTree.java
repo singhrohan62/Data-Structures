@@ -18,7 +18,7 @@ import java.util.*;
 
  	void Insert(int id){
  
- 				Node newNode = new Node(id);
+ 		Node newNode = new Node(id);
 		if(root==null){
 			root = newNode;
 			return;
