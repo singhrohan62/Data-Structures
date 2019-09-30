@@ -39,6 +39,31 @@ void postorder(Node* root)
 	}
 }
 
+void lvlorder(Node* root)
+{
+	//Basically, it's BFS
+	queue <Node*> q;
+	q.push(root);
+	while(!q.empty())
+	{
+		cout << q.front()->data << " ";
+		auto ref = q.front();
+		q.pop();
+		//cout << (ref)->data << " ";
+		if(ref->left != NULL)
+		{
+			Node* lC = ref->left;
+	  	q.push(lC);
+		}
+	  if(ref->right != NULL)
+		{
+			Node* rC = ref->right;
+			q.push(rC); 
+		}
+	}
+	cout << endl;
+}
+
 Node* insert(Node* root, int value)
 {
 	Node* newNode = new Node;
@@ -103,13 +128,20 @@ int main()
 	insert(root, 60);
 	insert(root, 40);
 	insert(root, 70);
+	cout << "Inorder: ";
 	inorder(root);
 	cout << endl;
+	cout << "Preorder: ";
 	preorder(root);
 	cout << endl;
+	cout << "Postorder: ";
 	postorder(root);
+	cout << endl;
+	cout << "Levelorder: ";
+	lvlorder(root);
 	cout << endl;
 	deleteNode(root, 70);
 	inorder(root);
+	cout << endl;
 	return 0;
 }
