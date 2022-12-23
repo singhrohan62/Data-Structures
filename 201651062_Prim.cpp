@@ -4,6 +4,8 @@ using namespace std;
 
 #define V 5;
 
+// Random comment: Rohan Singh
+
 int minKey(int key[], bool mstSet[])
 {
    // Initialize min value
